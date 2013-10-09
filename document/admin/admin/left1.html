@@ -1,0 +1,73 @@
+<!DOCTYPE html">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title></title>
+<link rel="stylesheet" type="text/css" href="template/default/css/admin.css">
+<script src="template/default/js/jquery.js"></script>
+<script language="javascript">
+function fnOnMenuClick(menu)
+{
+    $("#menus > dl > dt").removeClass("current");
+    $("#menus > dl > dd").css("display","none");
+    $(menu).parent().addClass("current");
+  $(menu).parent().next("dd").css("display","block");
+}
+
+</script>
+</head>
+<body style="overflow:hidden">
+  <div id="sidebar">
+    <div id="menus">
+      <dl>
+        <dt><a onclick="fnOnMenuClick(this);" target="main" href="index.php?lang=cn&path=about&menu=about_action&menuid=1">管理关于我们</a></dt>
+        <dt><a onclick="fnOnMenuClick(this);" href="javascript:;">新闻中心</a></dt>
+        <dd style="display:none" class="submenu">
+            <p><a target="main" href="index.php?lang=cn&path=news&menu=news_add&menuid=2">添加新闻中心</a></p>
+            <p><a target="main" href="index.php?lang=cn&path=news&menu=news_action&menuid=2">管理新闻中心</a></p>
+        </dd>
+        <dt><a onclick="fnOnMenuClick(this);" href="javascript:;">产品中心</a></dt>
+        <dd style="display:none" class="submenu">
+            <p><a target="main" href="index.php?lang=cn&path=product&menu=product_add&menuid=3">添加产品中心</a></p>
+            <p><a target="main" href="index.php?lang=cn&path=product&menu=product_action&menuid=3">管理产品中心</a></p>
+        </dd>
+        <dt><a onclick="fnOnMenuClick(this);" href="javascript:;">图片中心</a></dt>
+        <dd style="display:none" class="submenu">
+            <p><a target="main" href="index.php?lang=cn&path=img&menu=img_add&menuid=4">添加图片中心</a></p>
+            <p><a target="main" href="index.php?lang=cn&path=img&path=img&menu=img_action&menuid=4">管理图片中心</a></p>
+        </dd>
+        <dt><a onclick="fnOnMenuClick(this);" href="javascript:;">下载中心</a></dt>
+        <dd style="display:none" class="submenu">
+            <p><a target="main" href="index.php?lang=cn&path=download&menu=download_add&menuid=5">添加下载中心</a></p>
+            <p><a target="main" href="index.php?lang=cn&path=download&menu=download_action&menuid=5">管理下载中心</a></p>
+        </dd>
+        <dt><a onclick="fnOnMenuClick(this);" href="javascript:;">招聘中心</a></dt>
+        <dd style="display:none" class="submenu">
+            <p><a target="main" href="index.php?lang=cn&path=job&menu=job_add&menuid=6">添加招聘中心</a></p>
+            <p><a target="main" href="index.php?lang=cn&path=job&menu=job_action&menuid=6">管理招聘中心</a></p>
+            <p><a target="main" href="index.php?lang=cn&path=job&menu=resume_action">简历管理</a></p>
+        </dd>
+        <dt><a onclick="fnOnMenuClick(this);" href="javascript:;">在线留言</a></dt>
+        <dd style="display:none" class="submenu">
+            <p><a target="main" href="index.php?lang=cn&path=message&menu=message&menuid=7">在线留言配置</a></p>
+            <p><a target="main" href="index.php?lang=cn&path=message&menu=message_action&menuid=7">管理在线留言</a></p>
+        </dd>
+        <dt><a onclick="fnOnMenuClick(this);" href="javascript:;">常见问题</a></dt>
+        <dd style="display:none" class="submenu">
+            <p><a target="main" href="index.php?lang=cn&path=faq&menu=faq_add&menuid=10">添加常见问题</a></p>
+            <p><a target="main" href="index.php?lang=cn&path=faq&menu=faq_action&menuid=10">管理常见问题</a></p>
+        </dd>
+        <dt><a onclick="fnOnMenuClick(this);" href="javascript:;">在线反馈</a></dt>
+        <dd style="display:none" class="submenu">
+            <p><a target="main" href="index.php?lang=cn&path=plus&menu=feedback">在线反馈配置</a></p>
+            <p><a target="main" href="index.php?lang=cn&path=plus&menu=feedback_action">管理在线反馈</a></p>
+        </dd>
+      </dl>
+    </dd>
+    <div id="copyright">
+    <p>Powered by <a href="http://www.kuwebs.com" target="_blank">kuwebs.com</a></p>
+    <p>&copy; 2011, <a href="http://www.kuwebs.com/" target="_blank">Kuwebs Inc.</a></p>
+  </div>
+  </div>
+</body>
+</html>

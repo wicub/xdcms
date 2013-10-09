@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>分类树</title>
+<link href="http://localhost/Kuwebs/rsadmin/template/default/css/admin.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<table width="100%" border="0" background="#EEEEEE">
+<tr><td colspan="3" height="10">&nbsp;</td></tr>
+<tr>
+<td width="1%">
+</td>
+<td width="98%">
+  <table width="100%" bgcolor="#F4FAFB" style="border:1px solid #99d3fb">
+    <tr height="30" style="padding:3px 10px;">
+      <td width="40%" align="left" height="40"><span style="font-size:16px; font-weight:bold">&nbsp;&nbsp;栏目管理设置</span></td>
+      <td width="40%" align="right"><a href="index.php?lang=cn&path=menu&menu=menu_add">添加一级栏目</a>&nbsp;&nbsp;</td>
+    </tr>
+  </table>
+
+<form name='formSort' enctype="multipart/form-data" action="index.php?lang=cn&path=menu&menu=menu_action&action=sort" method="post">
+<table width="100%" bgcolor="#FFFFFF" class="tableList" cellpadding="1" cellspacing="1" >
+  <tr>
+    <td width="5%" align="center" height="25"><span style="font-size:12px; font-weight:bold">排序</span></td>
+    <td width="5%" align="center">ID</td>
+    <td width="35%" align="center">栏目名称</td>
+    <td width="7%" align="center">栏目类型</td>
+    <td width="8%" align="center">绑定模块</td>
+    <td width="10%" align="center">导航栏显示</td>
+    <td width="25%" align="center">管理操作</td>
+  </tr>
+<!---->
+  <tr>
+    <td width="5%" align="center"><input type="text" name="sortnum[1]"  value='10' size="3" /></td>
+    <td align="center">1</td>
+    <td align="left">关于我们</td>
+    <td align="center">内部栏目</td>
+    <td align="center">简介</td>
+    <td align="center">主导航栏</td>
+    <td align="center"><a href="index.php?lang=cn&path=menu&menu=menu_add&fatherid=1">添加子栏目</a> | <a href="index.php?lang=cn&path=menu&menu=menu_modify&menuid=1">编辑</a> | <a href="index.php?lang=cn&path=menu&menu=menu_action&action=delete&menuid=1" onclick="return confirm('警告！数据删除，无法恢复，你确定要删除吗？')">删除</a></td>
+  </tr>
+<!---->
+    <tr>
+      <td align="center"><input type="text" name="sortnum[8]"  value='1' size="3" /></td>
+      <td align="center">8</td>
+      <td align="left">&nbsp;&nbsp;&nbsp;&nbsp;|--公司简介</td>
+      <td align="center">内部栏目</td>
+      <td align="center">简介</td>
+      <td align="center">底部导航栏</td>
+      <td align="center"><a href="index.php?lang=cn&path=menu&menu=menu_add&fatherid=8">添加子栏目</a> | <a href="index.php?lang=cn&path=menu&menu=menu_modify&menuid=8">编辑</a> | <a href="index.php?lang=cn&path=menu&menu=menu_action&action=delete&menuid=8" onclick="return confirm('警告！数据删除，无法恢复，你确定要删除吗？')">删除</a></td>
+    </tr>
+<!---->
+    <tr>
+      <td align="center"><input type="text" name="sortnum[9]"  value='99' size="3" /></td>
+      <td align="center">9</td>
+      <td align="left">&nbsp;&nbsp;&nbsp;&nbsp;|--联系我们</td>
+      <td align="center">内部栏目</td>
+      <td align="center">简介</td>
+      <td align="center">都显示</td>
+      <td align="center"><a href="index.php?lang=cn&path=menu&menu=menu_add&fatherid=9">添加子栏目</a> | <a href="index.php?lang=cn&path=menu&menu=menu_modify&menuid=9">编辑</a> | <a href="index.php?lang=cn&path=menu&menu=menu_action&action=delete&menuid=9" onclick="return confirm('警告！数据删除，无法恢复，你确定要删除吗？')">删除</a></td>
+    </tr>
+<!---->
+  <tr>
+    <td width="5%" align="center"><input type="text" name="sortnum[2]"  value='20' size="3" /></td>
+    <td align="center">2</td>
+    <td align="left">新闻中心</td>
+    <td align="center">内部栏目</td>
+    <td align="center">新闻</td>
+    <td align="center">都显示</td>
+    <td align="center"><a href="index.php?lang=cn&path=menu&menu=menu_add&fatherid=2">添加子栏目</a> | <a href="index.php?lang=cn&path=menu&menu=menu_modify&menuid=2">编辑</a> | <a href="index.php?lang=cn&path=menu&menu=menu_action&action=delete&menuid=2" onclick="return confirm('警告！数据删除，无法恢复，你确定要删除吗？')">删除</a></td>
+  </tr>
+<!---->
+    <tr>
+      <td align="center"><input type="text" name="sortnum[41]"  value='1' size="3" /></td>
+      <td align="center">41</td>
+      <td align="left">&nbsp;&nbsp;&nbsp;&nbsp;|--公司新闻</td>
+      <td align="center">内部栏目</td>
+      <td align="center">新闻</td>
+      <td align="center">都不显示</td>
+      <td align="center"><a href="index.php?lang=cn&path=menu&menu=menu_add&fatherid=41">添加子栏目</a> | <a href="index.php?lang=cn&path=menu&menu=menu_modify&menuid=41">编辑</a> | <a href="index.php?lang=cn&path=menu&menu=menu_action&action=delete&menuid=41" onclick="return confirm('警告！数据删除，无法恢复，你确定要删除吗？')">删除</a></td>
+    </tr>
+<!---->
+    <tr>
+      <td align="center"><input type="text" name="sortnum[62]"  value='2' size="3" /></td>
+      <td align="center">62</td>
+      <td align="left">&nbsp;&nbsp;&nbsp;&nbsp;|--行业资讯</td>
+      <td align="center">内部栏目</td>
+      <td align="center">新闻</td>
+      <td align="center">都不显示</td>
+      <td align="center"><a href="index.php?lang=cn&path=menu&menu=menu_add&fatherid=62">添加子栏目</a> | <a href="index.php?lang=cn&path=menu&menu=menu_modify&menuid=62">编辑</a> | <a href="index.php?lang=cn&path=menu&menu=menu_action&action=delete&menuid=62" onclick="return confirm('警告！数据删除，无法恢复，你确定要删除吗？')">删除</a></td>
+    </tr>
+<!---->
+    <tr>
+      <td align="center"><input type="text" name="sortnum[100]"  value='5' size="3" /></td>
+      <td align="center">100</td>
+      <td align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|--eeeee</td>
+      <td align="center">内部栏目</td>
+      <td align="center">新闻</td>
+      <td align="center">都不显示</td>
+      <td align="center"><a href="index.php?lang=cn&path=menu&menu=menu_modify&menuid=100">编辑</a> | <a href="index.php?lang=cn&path=menu&menu=menu_action&action=delete&menuid=100" onclick="return confirm('警告！数据删除，无法恢复，你确定要删除吗？')">删除</a></td>
+    </tr>
+<!---->
+  <tr>
+    <td width="5%" align="center"><input type="text" name="sortnum[3]"  value='30' size="3" /></td>
+    <td align="center">3</td>
+    <td align="left">产品中心</td>
+    <td align="center">内部栏目</td>
+    <td align="center">产品</td>
+    <td align="center">都显示</td>
+    <td align="center"><a href="index.php?lang=cn&path=menu&menu=menu_add&fatherid=3">添加子栏目</a> | <a href="index.php?lang=cn&path=menu&menu=menu_modify&menuid=3">编辑</a> | <a href="index.php?lang=cn&path=menu&menu=menu_action&action=delete&menuid=3" onclick="return confirm('警告！数据删除，无法恢复，你确定要删除吗？')">删除</a></td>
+  </tr>
+<!---->
+    <tr>
+      <td align="center"><input type="text" name="sortnum[95]"  value='5' size="3" /></td>
+      <td align="center">95</td>
+      <td align="left">&nbsp;&nbsp;&nbsp;&nbsp;|--电脑网络</td>
+      <td align="center">内部栏目</td>
+      <td align="center">产品</td>
+      <td align="center">都不显示</td>
+      <td align="center"><a href="index.php?lang=cn&path=menu&menu=menu_add&fatherid=95">添加子栏目</a> | <a href="index.php?lang=cn&path=menu&menu=menu_modify&menuid=95">编辑</a> | <a href="index.php?lang=cn&path=menu&menu=menu_action&action=delete&menuid=95" onclick="return confirm('警告！数据删除，无法恢复，你确定要删除吗？')">删除</a></td>
+    </tr>
+<!---->
+    <tr>
+      <td align="center"><input type="text" name="sortnum[66]"  value='10' size="3" /></td>
+      <td align="center">66</td>
+      <td align="left">&nbsp;&nbsp;&nbsp;&nbsp;|--家用电器</td>
+      <td align="center">内部栏目</td>
+      <td align="center">产品</td>
+      <td align="center">都不显示</td>
+      <td align="center"><a href="index.php?lang=cn&path=menu&menu=menu_add&fatherid=66">添加子栏目</a> | <a href="index.php?lang=cn&path=menu&menu=menu_modify&menuid=66">编辑</a> | <a href="index.php?lang=cn&path=menu&menu=menu_action&action=delete&menuid=66" onclick="return confirm('警告！数据删除，无法恢复，你确定要删除吗？')">删除</a></td>
+    </tr>
+<!---->
+  <tr>
+    <td width="5%" align="center"><input type="text" name="sortnum[4]"  value='40' size="3" /></td>
+    <td align="center">4</td>
+    <td align="left">图片中心</td>
+    <td align="center">内部栏目</td>
+    <td align="center">图片</td>
+    <td align="center">都显示</td>
+    <td align="center"><a href="index.php?lang=cn&path=menu&menu=menu_add&fatherid=4">添加子栏目</a> | <a href="index.php?lang=cn&path=menu&menu=menu_modify&menuid=4">编辑</a> | <a href="index.php?lang=cn&path=menu&menu=menu_action&action=delete&menuid=4" onclick="return confirm('警告！数据删除，无法恢复，你确定要删除吗？')">删除</a></td>
+  </tr>
+<!---->
+    <tr>
+      <td align="center"><input type="text" name="sortnum[96]"  value='5' size="3" /></td>
+      <td align="center">96</td>
+      <td align="left">&nbsp;&nbsp;&nbsp;&nbsp;|--显示器</td>
+      <td align="center">内部栏目</td>
+      <td align="center">图片</td>
+      <td align="center">都不显示</td>
+      <td align="center"><a href="index.php?lang=cn&path=menu&menu=menu_add&fatherid=96">添加子栏目</a> | <a href="index.php?lang=cn&path=menu&menu=menu_modify&menuid=96">编辑</a> | <a href="index.php?lang=cn&path=menu&menu=menu_action&action=delete&menuid=96" onclick="return confirm('警告！数据删除，无法恢复，你确定要删除吗？')">删除</a></td>
+    </tr>
+<!---->
+    <tr>
+      <td align="center"><input type="text" name="sortnum[97]"  value='5' size="3" /></td>
+      <td align="center">97</td>
+      <td align="left">&nbsp;&nbsp;&nbsp;&nbsp;|--笔记本</td>
+      <td align="center">内部栏目</td>
+      <td align="center">图片</td>
+      <td align="center">都不显示</td>
+      <td align="center"><a href="index.php?lang=cn&path=menu&menu=menu_add&fatherid=97">添加子栏目</a> | <a href="index.php?lang=cn&path=menu&menu=menu_modify&menuid=97">编辑</a> | <a href="index.php?lang=cn&path=menu&menu=menu_action&action=delete&menuid=97" onclick="return confirm('警告！数据删除，无法恢复，你确定要删除吗？')">删除</a></td>
+    </tr>
+<!---->
+  <tr>
+    <td width="5%" align="center"><input type="text" name="sortnum[5]"  value='50' size="3" /></td>
+    <td align="center">5</td>
+    <td align="left">下载中心</td>
+    <td align="center">内部栏目</td>
+    <td align="center">下载</td>
+    <td align="center">都显示</td>
+    <td align="center"><a href="index.php?lang=cn&path=menu&menu=menu_add&fatherid=5">添加子栏目</a> | <a href="index.php?lang=cn&path=menu&menu=menu_modify&menuid=5">编辑</a> | <a href="index.php?lang=cn&path=menu&menu=menu_action&action=delete&menuid=5" onclick="return confirm('警告！数据删除，无法恢复，你确定要删除吗？')">删除</a></td>
+  </tr>
+<!---->
+    <tr>
+      <td align="center"><input type="text" name="sortnum[47]"  value='1' size="3" /></td>
+      <td align="center">47</td>
+      <td align="left">&nbsp;&nbsp;&nbsp;&nbsp;|--公司软件</td>
+      <td align="center">内部栏目</td>
+      <td align="center">下载</td>
+      <td align="center">都不显示</td>
+      <td align="center"><a href="index.php?lang=cn&path=menu&menu=menu_add&fatherid=47">添加子栏目</a> | <a href="index.php?lang=cn&path=menu&menu=menu_modify&menuid=47">编辑</a> | <a href="index.php?lang=cn&path=menu&menu=menu_action&action=delete&menuid=47" onclick="return confirm('警告！数据删除，无法恢复，你确定要删除吗？')">删除</a></td>
+    </tr>
+<!---->
+    <tr>
+      <td align="center"><input type="text" name="sortnum[67]"  value='2' size="3" /></td>
+      <td align="center">67</td>
+      <td align="left">&nbsp;&nbsp;&nbsp;&nbsp;|--常用工具</td>
+      <td align="center">内部栏目</td>
+      <td align="center">下载</td>
+      <td align="center">都不显示</td>
+      <td align="center"><a href="index.php?lang=cn&path=menu&menu=menu_add&fatherid=67">添加子栏目</a> | <a href="index.php?lang=cn&path=menu&menu=menu_modify&menuid=67">编辑</a> | <a href="index.php?lang=cn&path=menu&menu=menu_action&action=delete&menuid=67" onclick="return confirm('警告！数据删除，无法恢复，你确定要删除吗？')">删除</a></td>
+    </tr>
+<!---->
+  <tr>
+    <td width="5%" align="center"><input type="text" name="sortnum[6]"  value='60' size="3" /></td>
+    <td align="center">6</td>
+    <td align="left">招聘中心</td>
+    <td align="center">内部栏目</td>
+    <td align="center">招聘</td>
+    <td align="center">都显示</td>
+    <td align="center"><a href="index.php?lang=cn&path=menu&menu=menu_add&fatherid=6">添加子栏目</a> | <a href="index.php?lang=cn&path=menu&menu=menu_modify&menuid=6">编辑</a> | <a href="index.php?lang=cn&path=menu&menu=menu_action&action=delete&menuid=6" onclick="return confirm('警告！数据删除，无法恢复，你确定要删除吗？')">删除</a></td>
+  </tr>
+<!---->
+    <tr>
+      <td align="center"><input type="text" name="sortnum[49]"  value='1' size="3" /></td>
+      <td align="center">49</td>
+      <td align="left">&nbsp;&nbsp;&nbsp;&nbsp;|--技术部</td>
+      <td align="center">内部栏目</td>
+      <td align="center">招聘</td>
+      <td align="center">都不显示</td>
+      <td align="center"><a href="index.php?lang=cn&path=menu&menu=menu_add&fatherid=49">添加子栏目</a> | <a href="index.php?lang=cn&path=menu&menu=menu_modify&menuid=49">编辑</a> | <a href="index.php?lang=cn&path=menu&menu=menu_action&action=delete&menuid=49" onclick="return confirm('警告！数据删除，无法恢复，你确定要删除吗？')">删除</a></td>
+    </tr>
+<!---->
+    <tr>
+      <td align="center"><input type="text" name="sortnum[68]"  value='2' size="3" /></td>
+      <td align="center">68</td>
+      <td align="left">&nbsp;&nbsp;&nbsp;&nbsp;|--销售部</td>
+      <td align="center">内部栏目</td>
+      <td align="center">招聘</td>
+      <td align="center">都不显示</td>
+      <td align="center"><a href="index.php?lang=cn&path=menu&menu=menu_add&fatherid=68">添加子栏目</a> | <a href="index.php?lang=cn&path=menu&menu=menu_modify&menuid=68">编辑</a> | <a href="index.php?lang=cn&path=menu&menu=menu_action&action=delete&menuid=68" onclick="return confirm('警告！数据删除，无法恢复，你确定要删除吗？')">删除</a></td>
+    </tr>
+<!---->
+  <tr>
+    <td width="5%" align="center"><input type="text" name="sortnum[7]"  value='70' size="3" /></td>
+    <td align="center">7</td>
+    <td align="left">在线留言</td>
+    <td align="center">内部栏目</td>
+    <td align="center">在线留言</td>
+    <td align="center">都显示</td>
+    <td align="center"><a href="index.php?lang=cn&path=menu&menu=menu_add&fatherid=7">添加子栏目</a> | <a href="index.php?lang=cn&path=menu&menu=menu_modify&menuid=7">编辑</a> | <a href="index.php?lang=cn&path=menu&menu=menu_action&action=delete&menuid=7" onclick="return confirm('警告！数据删除，无法恢复，你确定要删除吗？')">删除</a></td>
+  </tr>
+<!---->
+  <tr>
+    <td width="5%" align="center"><input type="text" name="sortnum[10]"  value='80' size="3" /></td>
+    <td align="center">10</td>
+    <td align="left">常见问题</td>
+    <td align="center">内部栏目</td>
+    <td align="center">常见问题</td>
+    <td align="center">主导航栏</td>
+    <td align="center"><a href="index.php?lang=cn&path=menu&menu=menu_add&fatherid=10">添加子栏目</a> | <a href="index.php?lang=cn&path=menu&menu=menu_modify&menuid=10">编辑</a> | <a href="index.php?lang=cn&path=menu&menu=menu_action&action=delete&menuid=10" onclick="return confirm('警告！数据删除，无法恢复，你确定要删除吗？')">删除</a></td>
+  </tr>
+<!---->
+  <tr>
+    <td width="5%" align="center"><input type="text" name="sortnum[78]"  value='101' size="3" /></td>
+    <td align="center">78</td>
+    <td align="left">帮助中心</td>
+    <td align="center">外部链接</td>
+    <td align="center"></td>
+    <td align="center">都不显示</td>
+    <td align="center"><a href="index.php?lang=cn&path=menu&menu=menu_add&fatherid=78">添加子栏目</a> | <a href="index.php?lang=cn&path=menu&menu=menu_modify&menuid=78">编辑</a> | <a href="index.php?lang=cn&path=menu&menu=menu_action&action=delete&menuid=78" onclick="return confirm('警告！数据删除，无法恢复，你确定要删除吗？')">删除</a></td>
+  </tr>
+<!---->
+<tr><td colspan="7"><input type="submit" value="排序" class="button"/></td></tr>
+</table>
+</form>
+
+  <table width="100%" bgcolor="#F4FAFB">
+    <tr height="40" style="padding:3px 10px;">
+      <td align="center" valign="middle">
+        <font style="color:#9DACAF">    <table width="100%" bgcolor="#F4FAFB" style="border:1px solid #99d3fb">
+      <tr height="40" style="padding:3px 10px;">
+        <td align="center" valign="middle">
+          <font style="color:#9DACAF">
+              酷纬信息--Powered by Kuwebs          </font>
+        </td>
+      </tr>
+    </table>
+
+        </font>
+      </td>
+    </tr>
+  </table>
+
+</td>
+<td width="1%">
+</td>
+</tr>
+<tr><td colspan="3" height="10">&nbsp;</td></tr>
+</table>
+</body>
+</html>
+
+<!---->

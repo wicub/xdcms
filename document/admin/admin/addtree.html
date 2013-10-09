@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>添加分类树</title>
+<link href="http://localhost/Kuwebs/rsadmin/template/default/css/admin.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" language="javascript" src="http://localhost/Kuwebs/rsadmin/template/default/js/common.js"></script>
+<script type="text/javascript" language="javascript" src="http://localhost/Kuwebs/rsadmin/template/default/js/menu.js"></script>
+</head>
+
+<body>
+
+<table width="100%" border="0" background="#EEEEEE">
+  <tr>
+    <td colspan="3" height="10">&nbsp;</td>
+  </tr>
+  <tr>
+    <td width="1%"></td>
+    <td width="98%"> 
+      <table width="100%" bgcolor="#F4FAFB" style="border:1px solid #99d3fb">
+        <tr height="30" style="padding:3px 10px;">
+          <td width="40%" align="left" height="40"><span style="font-size:16px; font-weight:bold">&nbsp;&nbsp;添加栏目</span></td>
+          <td width="40%" align="right"><a href="index.php?lang=cn&path=menu&menu=menu">返回栏目管理</a>&nbsp;&nbsp;</td>
+        </tr>
+      </table>
+
+<form name='formSort' enctype="multipart/form-data" action="index.php?lang=cn&path=menu&menu=menu_action&action=add" method="post">
+<input type="text" name="fatherId" value="" style="display:none" />
+<input type="radio" name="kuMenuLang" value="cn" checked='checked' style="display:none" />
+<input type="radio" name="kuMenuLang" value="en"  style="display:none" />
+<table width="100%" bgcolor="#FFFFFF" class="tableList" cellpadding="1" cellspacing="1">
+  <tr>
+    <td width="30%" align="right">上级栏目名称</td>
+    <td width="70%" align="left"><input type="text" name="kuMenuFather" value="顶级目录" size="40" readonly="readonly" disabled="disabled"/></td>
+  </tr>
+
+  <tr>
+    <td align="right">栏目名称</td>
+    <td align="left"><input type="text" name="kuMenuContent" value="" size="40" /> <span style="color:#FF0000">*</span></td>
+  </tr>
+  <tr>
+    <td align="right">栏目目录名称</td>
+    <td align="left"><input type="text" name="kuMenuDirName" value="" size="40" />&nbsp;必须是英文字母、数字，长度为3-30之内</td>
+  </tr>
+  <tr>
+    <td align="right">同级目录排序</td>
+    <td align="left">
+      <input type="text" name="kuMenuSortNum" value="5" size="10" />数字越小，排序越靠前
+    </td>
+  </tr>
+  <tr>
+    <td align="right">主导航条显示</td>
+    <td align="left">
+      <input type="radio" name="kuWebsitNavShow" value="1"  checked="checked"/>都不显示
+      <input type="radio" name="kuWebsitNavShow" value="2" />主导航栏
+      <input type="radio" name="kuWebsitNavShow" value="3" />底部导航栏
+      <input type="radio" name="kuWebsitNavShow" value="4" />都显示  
+    </td>
+  </tr>
+  <tr>
+    <td align="right">是否在新窗口打开</td>
+    <td align="left"><input type="checkbox" name="kuWebsitBlankWindow" value="1" size="40" />是</td>
+  </tr>
+  <tr>
+    <td align="right">栏目属性</td>
+    <td align="left">
+      <input name="kuWebsitModelType" type="radio" value="1" onclick="displayDiv('systemModel','outLink')" checked="checked">内部栏目
+      &nbsp;
+      <input name="kuWebsitModelType" type="radio" value="2" onclick="displayDiv('outLink','systemModel')">外部链接
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2" align="right">
+      <input type="text" name="kuWebsitModel" style="display:none" value="" />
+      <div id="systemModel" style="width:100%; padding:1px 1px; display:block">
+        <table width="100%" height="100%" bgcolor="#FFFFFF" cellpadding="1" cellspacing="1"> 
+         <tr> 
+              <td width="30%" align="right">所属模块</td>
+              <td width="70%" align="left">
+                <select name="kuWebsitModelSelect" >
+                  <option value="1" >简介</option>
+                  <option value="2" >新闻</option>
+                  <option value="3" >产品</option>
+                  <option value="4" >图片</option>
+                  <option value="5" >下载</option>
+                  <option value="6" >招聘</option>
+                  <option value="7"  >在线留言</option>
+                  <option value="8"  >常见问题</option>
+                </select>&nbsp<font color="#FF0000">*</font>
+              </td>
+            </tr> 
+             <tr> 
+              <td align="right" height="25"><b>搜索引擎优化设置</b></td>
+              <td>&nbsp;</td>
+            </tr>
+            <tr> 
+              <td align="right">关键词</td>
+              <td><input name="kuWebsitKeyWords" type="text"  size="40" maxlength="200">&nbsp;多个关键词请用英文版逗号（“,”）隔开</td>
+            </tr>
+             <tr> 
+              <td align="right">简短描述</td>
+              <td><textarea name="kuWebsitDescription" cols="50" rows="4" ></textarea></td>
+            </tr>
+        </table> 
+      </div>
+      <div id="outLink" style="width:100%; display:none;">
+        <table  width="100%" bgcolor="#FFFFFF"  cellpadding="1" cellspacing="1">
+          <tr> 
+            <td width="30%" align="right">链接地址</td>
+            <td width="70%"> <input name="kuWebsitOutLink" type="text"  size="40" maxlength="200">&nbsp<font color="#FF0000">*</font>外部网址请用“http://www.xxx.com"的形式</td>
+          </tr> 
+        </table> 
+      </div>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2" align="center" valign="middle">
+      <input type="submit" value="确 定" class="button" onclick="return checkMenu()" />
+      <input type="reset" value="重 置" class="button" />
+    </td>
+  </tr>
+</table>
+</form>
+
+  <table width="100%" bgcolor="#F4FAFB">
+    <tr height="40" style="padding:3px 10px;">
+      <td align="center" valign="middle">
+        <font style="color:#9DACAF">    <table width="100%" bgcolor="#F4FAFB" style="border:1px solid #99d3fb">
+      <tr height="40" style="padding:3px 10px;">
+        <td align="center" valign="middle">
+          <font style="color:#9DACAF">
+              酷纬信息--Powered by Kuwebs          </font>
+        </td>
+      </tr>
+    </table>
+
+        </font>
+      </td>
+    </tr>
+  </table>
+
+</td>
+    <td width="1%"></td>
+  </tr>
+<tr><td colspan="3" height="10">&nbsp;</td></tr>
+</table>
+
+
+</body>
+</html>
+
+<!---->

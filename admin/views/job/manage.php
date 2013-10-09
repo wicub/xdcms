@@ -1,0 +1,170 @@
+<!--
+-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>酷纬信息--Powered by Kuwebs</title>
+<link href="<?php  echo template_url() ;?>/css/admin.css" rel="stylesheet" type="text/css">
+<script  type="text/javascript" src="<?php  echo template_url() ;?>/js/common.js"></script>
+
+
+</head>
+
+<body>
+  <table background="index_data/index.htm" border="0" width="100%">
+    <tbody><tr>
+      <td colspan="3" height="10">&nbsp;</td>
+    </tr>
+    <tr>
+      <td width="1%"></td>
+      <td width="98%"> 
+        <table style="border:1px solid #99d3fb" bgcolor="#F4FAFB" width="100%">
+          <tbody><tr style="padding:3px 10px;" height="30">
+            <td align="left" height="40" width="40%"><span style="font-size:16px; font-weight:bold">&nbsp;&nbsp;招聘浏览</span></td>
+            <td align="right" width="40%"><a href="http://localhost/Kuwebs/upload/bdmin/index.php?lang=cn&amp;path=job&amp;menu=job_add&amp;menuid=6">招聘添加</a></td>
+          </tr>
+        </tbody></table>
+        <form name="myform" action="index.php?lang=cn&amp;path=job&amp;menu=job_action&amp;action=delete" method="post">
+          <input name="menuid" value="6" style="display:none" type="text">
+          <table class="tableList" bgcolor="#F4FAFB" cellpadding="1" cellspacing="1" width="100%">
+            <tbody><tr>
+              <td align="center" width="5%">选中</td>
+              <td align="center" width="5%">ID</td>
+              <td align="center" width="30%">招聘标题</td>
+              <td align="center" width="10%">招聘部门</td>
+              <td align="center" width="10%">招聘职位</td>
+              <td align="center" width="10%">招聘人数</td>
+              <td align="center" width="5%">有效天数</td>
+              <td align="center" width="5%">状态</td>
+              <td align="center" width="10%">更新日期</td>
+              <td align="center" width="10%">操作</td>
+            </tr>
+<!---->		<?php foreach($result as $v):?>
+            <tr>
+              <td align="center"><input name="id[]" value="13" type="checkbox"></td>
+              <td align="center"><?php echo $v->id?></td>
+              <td align="center"><?php echo $v->title?></td>
+              <td align="center"><?php echo $v->depart?></td>
+              <td align="center"><?php echo $v->post?></td>
+              <td align="center"><?php echo $v->num?></td>
+              <td align="center">0</td>
+              <td align="center"> <?php echo $v->status?>         </td>
+              <td align="center"></td>
+              <td align="center">
+                <a href="">编辑</a>
+                <a href="" onclick="return confirm('警告！数据删除，无法恢复，你确定要删除吗？')">删除</a>
+              </td>
+            </tr>
+			<?php endforeach;?>
+<!--
+            <tr>
+              <td align="center"><input name="id[]" value="12" type="checkbox"></td>
+              <td align="center">12</td>
+              <td align="center">销售经理</td>
+              <td align="center">销售部</td>
+              <td align="center">销售经理</td>
+              <td align="center">0</td>
+              <td align="center">0</td>
+              <td align="center">             发布              </td>
+              <td align="center">2011-09-11 08:30:00</td>
+              <td align="center">
+                <a href="http://localhost/Kuwebs/upload/bdmin/index.php?lang=cn&amp;path=job&amp;menu=job_modify&amp;menuid=6&amp;id=12">编辑</a>
+                <a href="http://localhost/Kuwebs/upload/bdmin/index.php?lang=cn&amp;path=job&amp;menu=job_action&amp;menuid=6&amp;action=delete&amp;id=12" onclick="return confirm('警告！数据删除，无法恢复，你确定要删除吗？')">删除</a>
+              </td>
+            </tr>
+
+            <tr>
+              <td align="center"><input name="id[]" value="11" type="checkbox"></td>
+              <td align="center">11</td>
+              <td align="center">市场经理</td>
+              <td align="center">市场部</td>
+              <td align="center">市场经理</td>
+              <td align="center">3</td>
+              <td align="center">0</td>
+              <td align="center">             发布              </td>
+              <td align="center">2011-09-12 05:26:05</td>
+              <td align="center">
+                <a href="http://localhost/Kuwebs/upload/bdmin/index.php?lang=cn&amp;path=job&amp;menu=job_modify&amp;menuid=6&amp;id=11">编辑</a>
+                <a href="http://localhost/Kuwebs/upload/bdmin/index.php?lang=cn&amp;path=job&amp;menu=job_action&amp;menuid=6&amp;action=delete&amp;id=11" onclick="return confirm('警告！数据删除，无法恢复，你确定要删除吗？')">删除</a>
+              </td>
+            </tr>
+
+            <tr>
+              <td align="center"><input name="id[]" value="10" type="checkbox"></td>
+              <td align="center">10</td>
+              <td align="center">PHP工程师</td>
+              <td align="center">技术部</td>
+              <td align="center">工程师</td>
+              <td align="center">0</td>
+              <td align="center">0</td>
+              <td align="center">             发布              </td>
+              <td align="center">2011-09-11 08:26:03</td>
+              <td align="center">
+                <a href="http://localhost/Kuwebs/upload/bdmin/index.php?lang=cn&amp;path=job&amp;menu=job_modify&amp;menuid=6&amp;id=10">编辑</a>
+                <a href="http://localhost/Kuwebs/upload/bdmin/index.php?lang=cn&amp;path=job&amp;menu=job_action&amp;menuid=6&amp;action=delete&amp;id=10" onclick="return confirm('警告！数据删除，无法恢复，你确定要删除吗？')">删除</a>
+              </td>
+            </tr>
+
+            <tr>
+              <td align="center"><input name="id[]" value="9" type="checkbox"></td>
+              <td align="center">9</td>
+              <td align="center">高级美工工程师</td>
+              <td align="center">技术部</td>
+              <td align="center">工程师</td>
+              <td align="center">0</td>
+              <td align="center">0</td>
+              <td align="center">             发布              </td>
+              <td align="center">2011-09-11 08:25:55</td>
+              <td align="center">
+                <a href="http://localhost/Kuwebs/upload/bdmin/index.php?lang=cn&amp;path=job&amp;menu=job_modify&amp;menuid=6&amp;id=9">编辑</a>
+                <a href="http://localhost/Kuwebs/upload/bdmin/index.php?lang=cn&amp;path=job&amp;menu=job_action&amp;menuid=6&amp;action=delete&amp;id=9" onclick="return confirm('警告！数据删除，无法恢复，你确定要删除吗？')">删除</a>
+              </td>
+            </tr>
+
+            <tr>
+              <td align="center"><input name="id[]" value="8" type="checkbox"></td>
+              <td align="center">8</td>
+              <td align="center">网页美工</td>
+              <td align="center">技术部</td>
+              <td align="center">工程师</td>
+              <td align="center">0</td>
+              <td align="center">0</td>
+              <td align="center">             发布              </td>
+              <td align="center">2011-09-11 08:24:00</td>
+              <td align="center">
+                <a href="http://localhost/Kuwebs/upload/bdmin/index.php?lang=cn&amp;path=job&amp;menu=job_modify&amp;menuid=6&amp;id=8">编辑</a>
+                <a href="http://localhost/Kuwebs/upload/bdmin/index.php?lang=cn&amp;path=job&amp;menu=job_action&amp;menuid=6&amp;action=delete&amp;id=8" onclick="return confirm('警告！数据删除，无法恢复，你确定要删除吗？')">删除</a>
+              </td>
+            </tr>
+-->
+            <tr> 
+              <td colspan="10" align="left" height="20">
+                <input name="selectAllCheckBox" onclick="checkCheckBoxAll(this.form)" type="checkbox">
+                选中本页显示的所有招聘
+                <input name="submit" value="删除选定的条目" onclick="return confirm('警告！数据删除，无法恢复，你确定要删除吗？')" type="submit"> 
+              </td>
+            </tr>
+            <tr>
+              <td colspan="10" align="center"><a href="http://localhost/Kuwebs/upload/bdmin/index.php?lang=cn&amp;path=job&amp;menu=job_action&amp;page=1"><span>第一页</span></a><a href="http://localhost/Kuwebs/upload/bdmin/index.php?lang=cn&amp;path=job&amp;menu=job_action&amp;page=1"><span>上一页</span></a>   <font color="red">〖1〗</font>    <a href="http://localhost/Kuwebs/upload/bdmin/index.php?lang=cn&amp;path=job&amp;menu=job_action&amp;page=1"><span>下一页</span></a> <a href="http://localhost/Kuwebs/upload/bdmin/index.php?lang=cn&amp;path=job&amp;menu=job_action&amp;page=1"><span>最后一页</span></a>              </td>
+            </tr>
+          </tbody></table>
+        </form>    <table style="border:1px solid #99d3fb" bgcolor="#F4FAFB" width="100%">
+      <tbody><tr style="padding:3px 10px;" height="40">
+        <td align="center" valign="middle">
+          <font style="color:#9DACAF">
+              酷纬信息--Powered by Kuwebs          </font>
+        </td>
+      </tr>
+    </tbody></table>
+
+  
+  </td>
+      <td width="1%"></td>
+    </tr>
+  <tr><td colspan="3" height="10">&nbsp;</td></tr>
+  </tbody></table>
+
+
+
+</body></html>
+<!---->

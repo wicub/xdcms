@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>XD CMS Management System</title>
+<link href="css/admin.css" rel="stylesheet" type="text/css" />
+<script src="js/jquery.js"></script>
+<script language="javascript">
+function fnOnTabClick(tab)
+{
+  //修改Tab样式
+    $("#header_tabs > ul > li").removeClass("current");
+    $(tab).parent().parent().addClass("current");
+}
+function changelang()
+{
+  if('en' == $("#lang").val()){top.location.href='index.php?lang=en';}
+  else top.location.href='index.php?lang=cn';
+}
+</script>
+</head>
+
+<body>
+<body style="overflow:hidden">
+<div id="header">
+  <div id="logo"> XDcms Management System</div>
+  <div id="panel">
+
+    <div id="header_tabs">
+      <ul>
+        <li class = "current">
+          <span>
+            <a href="left.html" onclick="fnOnTabClick(this);" target="menu">基本设置</a>
+          </span>
+        </li>
+        <li>
+          <span>
+            <a href="left1.html" onclick="fnOnTabClick(this);" target="menu">内容管理</a>
+          </span>
+        </li>
+        <li>
+          <span>
+            <a href="left.php?lang=cn&tab=block" onclick="fnOnTabClick(this);" target="menu">数据块管理</a>
+          </span>
+        </li>
+        <li>
+          <span>
+            <a href="left.php?lang=cn&tab=template" onclick="fnOnTabClick(this);" target="menu">模板风格</a>
+          </span>
+        </li>
+        <li>
+          <span>
+            <a href="left.php?lang=cn&tab=advanced" onclick="fnOnTabClick(this);" target="menu">高级设置</a>
+          </span>
+        </li>
+        <li>
+          <span>
+            <a href="left.php?lang=cn&tab=administrator" onclick="fnOnTabClick(this);" target="menu">管理工具</a>
+          </span>
+        </li>
+      </ul>
+
+      <div id="header_links">
+        <p style="margin-right:20px;"><iframe style="margin:8px 0px 0px 0px;" src="ad/top.html" frameborder=0 scrolling=no width="600" height="20"></iframe></p>
+        <p>您好，<strong>admin</strong> &nbsp;&nbsp;[&nbsp;<a target="_parent" href="index.php?lang=cn&path=login&menu=login_action&action=logout">注 销</a>&nbsp;]</p>
+        <p><a href="help.html" class="btnlink" target="_blank">在线帮助</a> </p>
+      </div>
+      <div id="header_lang">
+        <p>
+          当前编辑版本: <font color="red">中文版</font>          <select onchange="changelang();" id="lang">
+            <option value='cn' selected='selected'>Chinese</option>
+            <option value='en' >English</option>
+          </select>
+        </p>
+      </div>
+    </div>
+
+
+  </div>
+</div>
+</body>
+</html>

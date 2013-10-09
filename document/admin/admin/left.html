@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title></title>
+<link rel="stylesheet" type="text/css" href="css/admin.css">
+<script src="js/jquery.js"></script>
+<script language="javascript">
+function fnOnMenuClick(menu)
+{
+    $("#menus > dl > dt").removeClass("current");
+    $("#menus > dl > dd").css("display","none");
+    $(menu).parent().addClass("current");
+  $(menu).parent().next("dd").css("display","block");
+}
+</script>
+</head>
+<body style="overflow:hidden">
+  <div id="sidebar">
+    <div id="menus">
+      <dl>
+        <dt class="current"><a onclick="fnOnMenuClick(this);" target="main" href="index.php?lang=cn&path=system&menu=basic">基本信息</a></dt>
+        <dt><a onclick="fnOnMenuClick(this);" target="main" href="index.php?lang=cn&path=menu&menu=menu">栏目管理</a></dt>
+        <dt><a onclick="fnOnMenuClick(this);" target="main" href="index.php?lang=cn&path=system&menu=flash">Banner配置</a></dt>
+        <dt><a onclick="fnOnMenuClick(this);" target="main" href="index.php?lang=cn&path=system&menu=flashindex">主页Banner配置</a></dt>
+        <dt><a onclick="fnOnMenuClick(this);" target="main" href="index.php?lang=cn&path=system&menu=foot">页脚设置</a></dt>
+        <dt><a onclick="fnOnMenuClick(this);" target="main" href="index.php?lang=cn&path=system&menu=block">数据块配置</a></dt>
+        <dt><a onclick="fnOnMenuClick(this);" target="main" href="index.php?lang=cn&path=friendlink&menu=friendlink_action">管理友情链接</a></dt>
+        <dt><a onclick="fnOnMenuClick(this);" target="main" href="index.php?lang=cn&path=system&menu=seo">SEO设置</a></dt>
+        <dt><a onclick="fnOnMenuClick(this);" target="main" href="index.php?lang=cn&path=html&menu=html">网站静态化</a></dt>
+        <dt><a target="_blank" href="http://docs.kuwebs.com/user/">在线帮助</a></dt>
+        <dt><a target="_blank" href="http://bbs.kuwebs.com/">技术支持</a></dt>
+      </dl>
+    </dd>
+    <div id="copyright">
+    <p>Powered by <a href="http://www.kuwebs.com" target="_blank">kuwebs.com</a></p>
+    <p>&copy; 2011, <a href="http://www.kuwebs.com/" target="_blank">Kuwebs Inc.</a></p>
+  </div>
+  </div>
+</body>
+</html>

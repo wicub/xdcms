@@ -1,0 +1,181 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0075)http://localhost/Kuwebs/upload/bdmin/index.php?lang=cn&path=system&menu=img -->
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>酷纬信息--Powered by Kuwebs</title>
+<link href="admin.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" language="javascript" src="common.js"></script>
+<script type="text/javascript" language="javascript" src="img.js"></script>  
+</head>
+
+<body>
+  <table width="100%" border="0" background="index.php">
+    <tbody><tr>
+      <td colspan="3" height="10">&nbsp;</td>
+    </tr>
+    <tr>
+      <td width="1%"></td>
+      <td width="98%"> 
+        <table width="100%" bgcolor="#F4FAFB" style="border:1px solid #99d3fb">
+          <tbody><tr height="30" style="padding:3px 10px;">
+            <td width="40%" align="left" height="40"><span style="font-size:16px; font-weight:bold">&nbsp;&nbsp;网站图片设置管理</span></td>
+            <td width="40%" align="right">&nbsp;&nbsp;</td>
+          </tr>
+        </tbody></table>
+        <form name="myform" enctype="multipart/form-data" action="http://localhost/Kuwebs/upload/bdmin/index.php?lang=cn&path=system&menu=system_action&action=img" method="post">
+         <table width="100%" bgcolor="#F4FAFB" class="tableList" cellpadding="1" cellspacing="1">
+          <tbody><tr> 
+            <td width="30%" align="right">允许上传的图片格式</td>
+            <td width="70%"> 
+                <input name="kuWebsiteAllowUploadImgFormat" type="text" size="30" maxlength="200" value="gif|jpg|png"> 
+                多种图片请用 "|" 隔开
+            </td>
+          </tr> 
+          <tr> 
+             <td align="right"><font color="#FF0000">*</font>允许上传的最大尺寸</td>
+             <td> 
+               <input name="kuWebsiteUploadImgMax" type="text" size="15" maxlength="200" value="2"> 
+               MB</td>        
+          </tr>
+          <tr> 
+            <td align="right"><font color="#FF0000">*</font>缩略图大小</td>
+            <td>
+              <p>产品模块: 宽<input name="kuWebsiteImgThumbWithProduct" type="text" size="5" maxlength="200" value="140">像素&nbsp;&nbsp;
+              高<input name="kuWebsiteImgThumbHeightProduct" type="text" size="5" maxlength="200" value="110">像素 </p>              
+              <p style="margin-top:8px;">图片模块: 宽<input name="kuWebsiteImgThumbWithImg" type="text" size="5" maxlength="200" value="140">像素&nbsp;&nbsp;
+              高<input name="kuWebsiteImgThumbHeightImg" type="text" size="5" maxlength="200" value="110">像素 </p>              
+            </td>
+          </tr>  
+          <tr> 
+            <td align="right">图片添加水印</td>
+            <td>
+              <input name="kuWebsiteImgBigWate" type="checkbox" checked="checked">详细大图片添加  
+              <input name="kuWebsiteImgThumbWate" type="checkbox">缩略片添加
+            </td>
+          </tr> 
+          <tr> 
+            <td align="right">水印类型</td>
+            <td>
+              <input name="kuWebsiteWateType" type="radio" value="1" onclick="displayDiv(&#39;characterWateModel&#39;,&#39;imgWateMoudel&#39;)" checked="checked">文字水印  
+              <input name="kuWebsiteWateType" type="radio" value="2" onclick="displayDiv(&#39;imgWateMoudel&#39;,&#39;characterWateModel&#39;)">图片水印
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2">
+              <div id="characterWateModel" style=" width:100%; padding:1px 1px;  display:block; ">
+                <table width="100%" height="100%" bgcolor="#FFFFFF" cellpadding="1" cellspacing="1"> 
+                  <tbody><tr> 
+                  <td width="30%" align="right">文字水印</td>
+                  <td width="70%">
+                    <textarea name="kuWebsiteCharacterWateDescription" rows="2" cols="30">kuwebs</textarea>支持带有"\ n" 的跨行文字，不支持同时含有中英文
+                  </td>
+                  </tr> 
+                  <tr> 
+                    <td align="right">水印文字大小</td>
+                    <td> <input name="kuWebsiteCharacterWateSize" type="text" size="10" maxlength="200" value="10"></td>
+                  </tr> 
+                  <tr> 
+                    <td align="right">水印文字字体</td>
+                    <td>
+                      <select name="kuWebsiteCharacterWateFont">
+<!---->
+<option value="arial.ttf" selected="selected">arial.ttf</option>
+<!---->                                           
+                      </select>
+                      请将字体文件放到后台管理目录include/fonts/下      
+                    </td>
+                  </tr>
+                  <tr> 
+                    <td align="right">水印文字角度</td>
+                    <td> <input name="kuWebsiteCharacterWateAngle" type="text" size="3" maxlength="200" value="0">水平为0</td>
+                  </tr> 
+                  <tr> 
+                    <td align="right">水印文字颜色</td>
+                    <td> 
+                      <input name="kuWebsiteCharacterWateColor" id="wateColorId" type="text" size="30" maxlength="200" value="#6495ED">
+                      <select name="selectColor" onchange="if(this.options[this.selectedIndex].value != &#39;&#39;) 
+                      {changeColor(&#39;wateColorId&#39;, this.options[this.selectedIndex].value);}"> 
+                        <option>选择颜色</option>
+                        <option style="background-color: #FFFFFF;color:#FFFFFF" value="#FFFFFF">白 色</option> 
+                        <option style="background-color:Black;color:Black" value="#000000">黑 色</option> 
+                        <option style="background-color:Red;color:Red" value="#FF0000">红 色</option> 
+                        <option style="background-color:Yellow;color:Yellow" value="#FFFF00">黄 色</option> 
+                        <option style="background-color:Green;color:Green" value="#008000">绿 色</option> 
+                        <option style="background-color:Orange;color:Orange" value="#FF8000">橙 色</option> 
+                        <option style="background-color:Purple;color:Purple" value="#800080">紫 色</option> 
+                        <option style="background-color:Blue;color:Blue" value="#0000FF">蓝 色</option> 
+                        <option style="background-color:Brown;color:Brown" value="#800000">褐 色</option> 
+                        <option style="background-color:#00FFFF;color: #00FFFF" value="#00FFFF">粉 绿</option> 
+                        <option style="background-color:#7FFFD4;color: #7FFFD4" value="#7FFFD4">淡 绿</option> 
+                        <option style="background-color:#FFE4C4;color: #FFE4C4" value="#FFE4C4">黄 灰</option> 
+                        <option style="background-color:#7FFF00;color: #7FFF00" value="#7FFF00">翠 绿</option> 
+                        <option style="background-color:#D2691E;color: #D2691E" value="#D2691E">棕 红</option> 
+                        <option style="background-color:#FF7F50;color: #FF7F50" value="#FF7F50">砖 红</option> 
+                        <option style="background-color:#6495ED;color: #6495ED" value="#6495ED">淡 蓝</option> 
+                        <option style="background-color:#DC143C;color: #DC143C" value="#DC143C">暗 红</option> 
+                        <option style="background-color:#FF1493;color: #FF1493" value="#FF1493">玫瑰红</option> 
+                        <option style="background-color:#FF00FF;color: #FF00FF" value="#FF00FF">紫 红</option> 
+                        <option style="background-color:#FFD700;color: #FFD700" value="#FFD700">桔 黄</option> 
+                        <option style="background-color:#DAA520;color: #DAA520" value="#DAA520">军 黄</option> 
+                        <option style="background-color:#808080;color: #808080" value="#808080">烟 灰</option> 
+                        <option style="background-color:#778899;color: #778899" value="#778899">深 灰</option> 
+                        <option style="background-color:#B0C4DE;color: #B0C4DE" value="#B0C4DE">灰 蓝</option> 
+                       </select> 
+                    </td>
+                  </tr>     
+                 </tbody></table> 
+              </div>    
+              <div id="imgWateMoudel" style="width:100%;  display:none; ">
+                <table width="100%" bgcolor="#FFFFFF" cellpadding="1" cellspacing="1">
+                  <tbody><tr> 
+                    <td width="30%" align="right">水印图片</td>
+                    <td width="70%">
+                      <input type="text" name="kuWebsiteImgWatePath" value="../upload/201007/1277966953.gif" size="40" readonly="readonly" disabled="disabled">
+                      <iframe style=" padding:0; margin:0;" src="uploadphoto.htm" frameborder="0" scrolling="no" width="350" height="25"></iframe>
+                    </td>
+                  </tr>   
+                </tbody></table> 
+              </div>
+            </td>
+          </tr>
+          <tr> 
+            <td align="right">水印位置</td>
+            <td> 
+              <input type="radio" value="0" name="kuWebsiteCharacterWateMark">中 部
+              <input type="radio" value="1" name="kuWebsiteCharacterWateMark">左上角
+              <input type="radio" value="2" name="kuWebsiteCharacterWateMark">右上角
+              <input type="radio" value="3" name="kuWebsiteCharacterWateMark" checked="checked">右下角
+              <input type="radio" value="4" name="kuWebsiteCharacterWateMark">左下角
+              <br>
+              <input type="radio" value="5" name="kuWebsiteCharacterWateMark">顶中部
+              <input type="radio" value="6" name="kuWebsiteCharacterWateMark">右中部
+              <input type="radio" value="7" name="kuWebsiteCharacterWateMark">底中部
+              <input type="radio" value="8" name="kuWebsiteCharacterWateMark">左中部
+            </td>
+          </tr>  
+          <tr> 
+            <td height="30" colspan="2" align="center"> 
+              <input class="button" type="submit" name="Submit" value="提 交" onclick="return checkImg()">&nbsp;&nbsp;&nbsp;&nbsp;  
+              <input class="button" type="reset" name="Submit" value="重 置"> 
+            </td>
+          </tr>
+        </tbody></table>
+      </form>
+      <table width="100%" bgcolor="#F4FAFB" style="border:1px solid #99d3fb">
+      <tbody><tr height="40" style="padding:3px 10px;">
+        <td align="center" valign="middle">
+          <font style="color:#9DACAF">
+              酷纬信息--Powered by Kuwebs          </font>
+        </td>
+      </tr>
+    </tbody></table>
+
+  </td>
+      <td width="1%"></td>
+    </tr>
+  <tr><td colspan="3" height="10">&nbsp;</td></tr>
+  </tbody></table>
+
+
+
+<!----></body></html>
